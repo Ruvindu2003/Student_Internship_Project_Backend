@@ -1,21 +1,18 @@
 package org.example.dto;
 
-
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-
+@Builder
+public class ApplicationDTO {
     private Long id;
-
-    private String username;
-
-    private String email;
-
-    private String role;
-
-}
+    private Long studentId;
+    private Long postId;
+    private String status;
+    private String resumeLink;
+} 
