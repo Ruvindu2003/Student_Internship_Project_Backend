@@ -7,7 +7,6 @@ import org.example.repository.UserRepository;
 import org.example.security.JwtTokenProvider;
 import org.example.services.AuthService;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

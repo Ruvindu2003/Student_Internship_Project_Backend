@@ -1,6 +1,6 @@
 spring :
   datasource:
-    url: jdbc:mysql://localhost:3306/Student_internship
+    url: jdbc:mysql://localhost:3306/Student_internship_v2
     username: root
     password: 1234
   jpa :
@@ -8,10 +8,10 @@ spring :
     hibernate :
       ddl-auto : update
 
-      jwt:
-        secret: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.ANCf_8p1AE4ZQs7QuqGAyyfTEgYrKSjKWkhBk5cIn1_2QVr2jEjmM-1tu7EgnyOf_fAsvdFXva8Sv05iTGzETg
-        expiration: 86400000
+jwt:
+  secret: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.ANCf_8p1AE4ZQs7QuqGAyyfTEgYrKSjKWkhBk5cIn1_2QVr2jEjmM-1tu7EgnyOf_fAsvdFXva8Sv05iTGzETg
+  expiration: 86400000 # 1 day in ms
 
-      springdoc:
-        swagger-ui:
-          path: /swagger-ui.html
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
