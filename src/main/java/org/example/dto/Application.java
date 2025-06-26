@@ -3,6 +3,10 @@ package org.example.dto;
 import lombok.*;
 
 @AllArgsConstructor
+@Getter
+@Setter
+@Data
+@NoArgsConstructor
 public class Application {
 
     private Long id;
