@@ -1,6 +1,5 @@
 package org.example.dto;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,14 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class InternshipApply {
 
-    private Long id;
-
-    private String username;
-
-    private String email;
-
-    private String role;
+    private String resumeLink;
 
 }
