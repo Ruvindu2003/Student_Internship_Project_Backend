@@ -26,7 +26,7 @@ public class Application {
     private InternshipPost post;
 
     @Column(nullable = false)
-    private String status; // e.g., APPLIED, REVIEWED, ACCEPTED, REJECTED
+    private String status;
 
     @Column(nullable = true)
     private String resumeLink;
