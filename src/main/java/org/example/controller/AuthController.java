@@ -2,6 +2,7 @@ package org.example.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.dto.UserDTO;
+import org.example.enums.Role;
 import org.example.services.AuthService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,7 @@ public class AuthController {
     public ResponseEntity<UserDTO> register(@RequestBody Map<String, String> request) {
         UserDTO userDTO = UserDTO.builder()
                 .username(request.get("username"))
-                .role(request.get("role"))
+                .role(Role.valueOf(request.get("role")))
                 .build();
         UserDTO created = authService.register(userDTO, request.get("password"));
         return ResponseEntity.ok(created);

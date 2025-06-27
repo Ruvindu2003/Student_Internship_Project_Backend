@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.enums.Role;
 
 @Entity
 @Table(name = "users")
@@ -24,5 +25,6 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private String role; // STUDENT, COMPANY, ADMIN
+    @Enumerated(EnumType.STRING)
+    private Role role; // STUDENT, COMPANY, ADMIN
 } 

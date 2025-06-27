@@ -1,5 +1,5 @@
 package org.example.enums;
 
 public enum Role {
-    INTERN, COMPANY, ADMIN
+    STUDENT, COMPANY, ADMIN
 }
