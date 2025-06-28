@@ -8,7 +8,7 @@ import java.util.List;
 public interface AdminService {
     public List<UserDTO> getAllUsers();
     public List<InternshipPostDTO> getAllPosts();
-    public void deleteUser(Long userId);
+    public boolean deleteUser(Long userId);
     public void deletePost(Long postId);
 
 

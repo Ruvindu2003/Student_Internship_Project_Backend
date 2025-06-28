@@ -49,9 +49,10 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public void deleteUser(Long userId) {
+    public boolean deleteUser(Long userId) {
        userRepository.deleteById(userId);
 
+        return false;
     }
 
     @Override

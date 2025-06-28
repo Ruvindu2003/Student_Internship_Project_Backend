@@ -1,19 +1,20 @@
 package org.example.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.example.dto.InternshipPostDTO;
 import org.example.dto.UserDTO;
 import org.example.services.AdminService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/admin")
 public class AdminController {
-    @Autowired
-    private AdminService adminService;
+
+    private final AdminService adminService;
 
     @GetMapping("/users")
     public ResponseEntity<List<UserDTO>> getAllUsers() {
@@ -26,9 +27,9 @@ public class AdminController {
     }
 
     @DeleteMapping("/user/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-        adminService.deleteUser(id);
-        return ResponseEntity.noContent().build();
+    public ResponseEntity<Boolean> deleteUser(@PathVariable Long id) {
+        boolean deleteUser = adminService.deleteUser(id);
+        return ResponseEntity.ok(deleteUser);
     }
 
     @DeleteMapping("/post/{id}")
